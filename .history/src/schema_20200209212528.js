@@ -7,7 +7,6 @@ const typeDefs = `
         hello: String
         greet(name: String!): String
         task: [Task]
-        Users: [User]
     }
 
     type Task {
@@ -23,13 +22,6 @@ const typeDefs = `
         number: Int
     }
 
-    type User {
-        _id: ID
-        firstname: String
-        lastname: String
-        age: Int
-    }
-
     input UserInput {
         firstname: String
         lastname: String
@@ -39,8 +31,6 @@ const typeDefs = `
     type Mutation {
         createTask(input: TaskInput): Task
         createUser(input: UserInput): User
-        deleteUser(_id: ID): User
-        updateUser(_id: ID, input : UserInput): User
     }
 `;
 

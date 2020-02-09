@@ -33,7 +33,7 @@ export const resolvers = {
             return await User.findByIdAndDelete(_id);
         },
         async updateUser(_, {_id, input}) {
-            return await User.findByIdAndUpdate(_id, input, { new: true})
+            return await User.findByIdAndUpdate(_id, input)
         }
     }
 

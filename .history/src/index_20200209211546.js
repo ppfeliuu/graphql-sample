@@ -9,10 +9,7 @@ connect();
 
 app.use('/graphql', graphqlHTTP({
     graphiql: true,
-    schema: schema,
-    context: {
-        messageId: 'test'
-    }
+    schema: schema
 }));
 
 app.listen(8000, () => console.log('Server OK'));
